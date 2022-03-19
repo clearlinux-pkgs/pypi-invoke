@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-invoke
-Version  : 1.6.0
-Release  : 18
-URL      : https://files.pythonhosted.org/packages/37/b3/0b88358ee07789688d17ec7074a656da68ced50a122183187be12928b535/invoke-1.6.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/37/b3/0b88358ee07789688d17ec7074a656da68ced50a122183187be12928b535/invoke-1.6.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/37/b3/0b88358ee07789688d17ec7074a656da68ced50a122183187be12928b535/invoke-1.6.0.tar.gz.asc
+Version  : 1.7.0
+Release  : 19
+URL      : https://files.pythonhosted.org/packages/55/a2/763dc56e746ca013061b26c95868cb7f832c2a87dc27ed749641a734957f/invoke-1.7.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/55/a2/763dc56e746ca013061b26c95868cb7f832c2a87dc27ed749641a734957f/invoke-1.7.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/55/a2/763dc56e746ca013061b26c95868cb7f832c2a87dc27ed749641a734957f/invoke-1.7.0.tar.gz.asc
 Summary  : Pythonic task execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -18,12 +18,11 @@ Requires: pypi-invoke-license = %{version}-%{release}
 Requires: pypi-invoke-python = %{version}-%{release}
 Requires: pypi-invoke-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: invoke
-Provides: invoke-python
-Provides: invoke-python3
 
 %description
-To find out what's new in this version of Invoke, please see `the changelog
+1.7.0
+        
+        For a high level introduction, including example code, please see `our main
 
 %package bin
 Summary: bin components for the pypi-invoke package.
@@ -62,15 +61,15 @@ python3 components for the pypi-invoke package.
 
 
 %prep
-%setup -q -n invoke-1.6.0
-cd %{_builddir}/invoke-1.6.0
+%setup -q -n invoke-1.7.0
+cd %{_builddir}/invoke-1.7.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641445572
+export SOURCE_DATE_EPOCH=1647712402
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +85,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-invoke
-cp %{_builddir}/invoke-1.6.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-invoke/eadf0675261da2116b63962716fbf09f4cb946ca
+cp %{_builddir}/invoke-1.7.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-invoke/eadf0675261da2116b63962716fbf09f4cb946ca
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
