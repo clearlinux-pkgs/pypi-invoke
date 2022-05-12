@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-invoke
-Version  : 1.7.0
-Release  : 20
-URL      : https://files.pythonhosted.org/packages/55/a2/763dc56e746ca013061b26c95868cb7f832c2a87dc27ed749641a734957f/invoke-1.7.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/55/a2/763dc56e746ca013061b26c95868cb7f832c2a87dc27ed749641a734957f/invoke-1.7.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/55/a2/763dc56e746ca013061b26c95868cb7f832c2a87dc27ed749641a734957f/invoke-1.7.0.tar.gz.asc
+Version  : 1.7.1
+Release  : 21
+URL      : https://files.pythonhosted.org/packages/df/59/41b614b9d415929b4d72e3ee658bd088640e9a800e55663529a8237deae3/invoke-1.7.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/df/59/41b614b9d415929b4d72e3ee658bd088640e9a800e55663529a8237deae3/invoke-1.7.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/df/59/41b614b9d415929b4d72e3ee658bd088640e9a800e55663529a8237deae3/invoke-1.7.1.tar.gz.asc
 Summary  : Pythonic task execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -20,7 +20,7 @@ Requires: pypi-invoke-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-1.7.0
+1.7.1
         
         For a high level introduction, including example code, please see `our main
 
@@ -61,15 +61,15 @@ python3 components for the pypi-invoke package.
 
 
 %prep
-%setup -q -n invoke-1.7.0
-cd %{_builddir}/invoke-1.7.0
+%setup -q -n invoke-1.7.1
+cd %{_builddir}/invoke-1.7.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649765012
+export SOURCE_DATE_EPOCH=1652398986
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -85,7 +85,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-invoke
-cp %{_builddir}/invoke-1.7.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-invoke/eadf0675261da2116b63962716fbf09f4cb946ca
+cp %{_builddir}/invoke-1.7.1/LICENSE %{buildroot}/usr/share/package-licenses/pypi-invoke/eadf0675261da2116b63962716fbf09f4cb946ca
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
