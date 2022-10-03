@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-invoke
-Version  : 1.7.1
-Release  : 27
-URL      : https://files.pythonhosted.org/packages/df/59/41b614b9d415929b4d72e3ee658bd088640e9a800e55663529a8237deae3/invoke-1.7.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/df/59/41b614b9d415929b4d72e3ee658bd088640e9a800e55663529a8237deae3/invoke-1.7.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/df/59/41b614b9d415929b4d72e3ee658bd088640e9a800e55663529a8237deae3/invoke-1.7.1.tar.gz.asc
+Version  : 1.7.3
+Release  : 28
+URL      : https://files.pythonhosted.org/packages/2b/8d/9aec496bbd200589397b4cd6d546576c296465c1bdeb28c1ea1019e75a1f/invoke-1.7.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/2b/8d/9aec496bbd200589397b4cd6d546576c296465c1bdeb28c1ea1019e75a1f/invoke-1.7.3.tar.gz
+Source1  : https://files.pythonhosted.org/packages/2b/8d/9aec496bbd200589397b4cd6d546576c296465c1bdeb28c1ea1019e75a1f/invoke-1.7.3.tar.gz.asc
 Summary  : Pythonic task execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -20,9 +20,7 @@ Requires: pypi-invoke-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-1.7.1
-        
-        For a high level introduction, including example code, please see `our main
+|version| |python| |license| |ci| |coverage|
 
 %package bin
 Summary: bin components for the pypi-invoke package.
@@ -61,10 +59,10 @@ python3 components for the pypi-invoke package.
 
 
 %prep
-%setup -q -n invoke-1.7.1
-cd %{_builddir}/invoke-1.7.1
+%setup -q -n invoke-1.7.3
+cd %{_builddir}/invoke-1.7.3
 pushd ..
-cp -a invoke-1.7.1 buildavx2
+cp -a invoke-1.7.3 buildavx2
 popd
 
 %build
@@ -72,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656399655
+export SOURCE_DATE_EPOCH=1664807145
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -97,7 +95,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-invoke
-cp %{_builddir}/invoke-1.7.1/LICENSE %{buildroot}/usr/share/package-licenses/pypi-invoke/eadf0675261da2116b63962716fbf09f4cb946ca
+cp %{_builddir}/invoke-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-invoke/eadf0675261da2116b63962716fbf09f4cb946ca || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

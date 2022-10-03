@@ -1,5 +1,5 @@
 PKG_NAME := pypi-invoke
-URL = https://files.pythonhosted.org/packages/df/59/41b614b9d415929b4d72e3ee658bd088640e9a800e55663529a8237deae3/invoke-1.7.1.tar.gz
+URL = https://files.pythonhosted.org/packages/2b/8d/9aec496bbd200589397b4cd6d546576c296465c1bdeb28c1ea1019e75a1f/invoke-1.7.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
