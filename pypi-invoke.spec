@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-invoke
-Version  : 1.7.3
-Release  : 32
-URL      : https://files.pythonhosted.org/packages/2b/8d/9aec496bbd200589397b4cd6d546576c296465c1bdeb28c1ea1019e75a1f/invoke-1.7.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/2b/8d/9aec496bbd200589397b4cd6d546576c296465c1bdeb28c1ea1019e75a1f/invoke-1.7.3.tar.gz
-Source1  : https://files.pythonhosted.org/packages/2b/8d/9aec496bbd200589397b4cd6d546576c296465c1bdeb28c1ea1019e75a1f/invoke-1.7.3.tar.gz.asc
+Version  : 2.0.0
+Release  : 33
+URL      : https://files.pythonhosted.org/packages/43/59/42a4d8336c01a8df19e62b25949b551f9d3dc0d4292eea25eddacc9e329e/invoke-2.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/43/59/42a4d8336c01a8df19e62b25949b551f9d3dc0d4292eea25eddacc9e329e/invoke-2.0.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/43/59/42a4d8336c01a8df19e62b25949b551f9d3dc0d4292eea25eddacc9e329e/invoke-2.0.0.tar.gz.asc
 Summary  : Pythonic task execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -24,6 +24,21 @@ BuildRequires : buildreq-distutils3
 
 %description
 |version| |python| |license| |ci| |coverage|
+.. |version| image:: https://img.shields.io/pypi/v/invoke
+:target: https://pypi.org/project/invoke/
+:alt: PyPI - Package Version
+.. |python| image:: https://img.shields.io/pypi/pyversions/invoke
+:target: https://pypi.org/project/invoke/
+:alt: PyPI - Python Version
+.. |license| image:: https://img.shields.io/pypi/l/invoke
+:target: https://github.com/pyinvoke/invoke/blob/main/LICENSE
+:alt: PyPI - License
+.. |ci| image:: https://img.shields.io/circleci/build/github/pyinvoke/invoke/main
+:target: https://app.circleci.com/pipelines/github/pyinvoke/invoke
+:alt: CircleCI
+.. |coverage| image:: https://img.shields.io/codecov/c/gh/pyinvoke/invoke
+:target: https://app.codecov.io/gh/pyinvoke/invoke
+:alt: Codecov
 
 %package bin
 Summary: bin components for the pypi-invoke package.
@@ -62,10 +77,10 @@ python3 components for the pypi-invoke package.
 
 
 %prep
-%setup -q -n invoke-1.7.3
-cd %{_builddir}/invoke-1.7.3
+%setup -q -n invoke-2.0.0
+cd %{_builddir}/invoke-2.0.0
 pushd ..
-cp -a invoke-1.7.3 buildavx2
+cp -a invoke-2.0.0 buildavx2
 popd
 
 %build
@@ -73,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1672281998
+export SOURCE_DATE_EPOCH=1673916847
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
