@@ -6,11 +6,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-invoke
-Version  : 2.1.0
-Release  : 34
-URL      : https://files.pythonhosted.org/packages/b0/29/a509301332714aacc10ff98b7fe6539a9a1f96b18698efe9666ceae1485c/invoke-2.1.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/b0/29/a509301332714aacc10ff98b7fe6539a9a1f96b18698efe9666ceae1485c/invoke-2.1.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/b0/29/a509301332714aacc10ff98b7fe6539a9a1f96b18698efe9666ceae1485c/invoke-2.1.0.tar.gz.asc
+Version  : 2.1.1
+Release  : 35
+URL      : https://files.pythonhosted.org/packages/fc/ed/75616c70c3e96bdfec93f6a171e87f0463d9da21b061ff8af8ae7ecda17e/invoke-2.1.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/fc/ed/75616c70c3e96bdfec93f6a171e87f0463d9da21b061ff8af8ae7ecda17e/invoke-2.1.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/fc/ed/75616c70c3e96bdfec93f6a171e87f0463d9da21b061ff8af8ae7ecda17e/invoke-2.1.1.tar.gz.asc
 Summary  : Pythonic task execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -78,10 +78,10 @@ python3 components for the pypi-invoke package.
 
 
 %prep
-%setup -q -n invoke-2.1.0
-cd %{_builddir}/invoke-2.1.0
+%setup -q -n invoke-2.1.1
+cd %{_builddir}/invoke-2.1.1
 pushd ..
-cp -a invoke-2.1.0 buildavx2
+cp -a invoke-2.1.1 buildavx2
 popd
 
 %build
@@ -89,7 +89,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682973326
+export SOURCE_DATE_EPOCH=1683041151
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
