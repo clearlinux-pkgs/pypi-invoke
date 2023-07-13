@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-invoke
-Version  : 2.1.3
-Release  : 37
-URL      : https://files.pythonhosted.org/packages/46/37/0c5e8d33773e55fc265d80d87bb0e78b353a447d6702ba72584536b9cf9d/invoke-2.1.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/46/37/0c5e8d33773e55fc265d80d87bb0e78b353a447d6702ba72584536b9cf9d/invoke-2.1.3.tar.gz
+Version  : 2.2.0
+Release  : 38
+URL      : https://files.pythonhosted.org/packages/f9/42/127e6d792884ab860defc3f4d80a8f9812e48ace584ffc5a346de58cdc6c/invoke-2.2.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/f9/42/127e6d792884ab860defc3f4d80a8f9812e48ace584ffc5a346de58cdc6c/invoke-2.2.0.tar.gz
 Summary  : Pythonic task execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -75,10 +75,10 @@ python3 components for the pypi-invoke package.
 
 
 %prep
-%setup -q -n invoke-2.1.3
-cd %{_builddir}/invoke-2.1.3
+%setup -q -n invoke-2.2.0
+cd %{_builddir}/invoke-2.2.0
 pushd ..
-cp -a invoke-2.1.3 buildavx2
+cp -a invoke-2.2.0 buildavx2
 popd
 
 %build
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686840827
+export SOURCE_DATE_EPOCH=1689260544
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
