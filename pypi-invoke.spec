@@ -5,7 +5,7 @@
 #
 Name     : pypi-invoke
 Version  : 2.2.0
-Release  : 39
+Release  : 40
 URL      : https://files.pythonhosted.org/packages/f9/42/127e6d792884ab860defc3f4d80a8f9812e48ace584ffc5a346de58cdc6c/invoke-2.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f9/42/127e6d792884ab860defc3f4d80a8f9812e48ace584ffc5a346de58cdc6c/invoke-2.2.0.tar.gz
 Summary  : Pythonic task execution
